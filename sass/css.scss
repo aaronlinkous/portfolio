@@ -1,6 +1,8 @@
+@import 'bourbon/bourbon';
+
 @import "_variables.scss";
 @import "_type.scss";
 
-@import 'bourbon/bourbon';
-
 @import "_core.scss";
+
+@import "_home.scss";

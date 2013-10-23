@@ -1,9 +1,60 @@
 html, body {
 	@include size(100%);
+	margin: 0;
+	padding: 0;
+	background-color: $light_color;
 	font-size: $font_size;
 	line-height: $line_height;
 }
 
+* {
+	@include box-sizing(border-box);
+}
+
 header {
+	@extend %animated;
+	@include clearfix();
 	@include size(100% $header_height);
+	@include position(fixed, 0 0 0 0);
+	background-color: transparent;
+	padding: 0 $line_height/2;
+	line-height: $line_height*2;
+
+	a {
+		color: $light_color;
+
+		&:hover {
+			color: $accent_color !important;
+			text-decoration: none;
+		}
+	}
+
+	span {
+		color: rgba($light_color, .6);
+	}
+
+	&.active {
+		background-color: $light_color;
+
+		a {
+			color: $dark_color;
+		}
+
+		span {
+			color: $ghosted_color;
+		}
+	}
+
+	#name {
+		float: left;
+	}
+
+	nav {
+		float: right;
+	}
+}
+
+#marquee {
+	background-color: red;
+	height: $header_height*7;
 }

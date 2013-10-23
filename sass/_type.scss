@@ -4,14 +4,14 @@ h1, h2, h3, h4, h5, h6, li, p {
 }
 
 h1, h2 {
-	color: $brand_color;
-	font-size: 1.75rem;
+	color: $dark_color;
+	font-size: 3rem;
+	font-weight: 500;
 }
 
 h2 {
-	color: $dark_color;
-	font-weight: 700;
 	font-size: 1.25rem;
+	font-weight: 300;
 }
 
 h3, h4, h5, h6 {
@@ -20,12 +20,11 @@ h3, h4, h5, h6 {
 
 ul {
 	margin-top: 0;
-	padding-left: 2em;
+	padding-left: 1em;
 }
 
 li, p {
-	font-size: 1rem;
-	line-height: 1.75em;
+	font-size: 1em;
 	margin: 0 0 1.5em 0;
 
 	&:last-child {
@@ -39,10 +38,18 @@ li {
 
 a {
 	@extend %animated;
-	color: $brand_color;
+	color: $accent_color;
 	text-decoration: none;
 
 	&:hover {
-		color: $brand_color_dark;
+		text-decoration: underline;
 	}
+}
+
+.larger {
+	font-size: 1.25em;
+}
+
+.smaller {
+	font-size: .9em;
 }

@@ -1,10 +1,10 @@
 $light_color: #f0f0f0;
-$ghost_color: #8a8a95;
+$ghosted_color: #8a8a95;
 $dark_color: #1e1f2b;
 $accent_color: #08c882;
 
 $ratio: 1.6;
-$font_size: 20px;
+$font_size: 16px;
 $line_height: floor($font_size*$ratio);
 
 $header_height: $line_height*2;
@@ -18,7 +18,7 @@ $header_height: $line_height*2;
 }
 
 %animated {
-	@include transition (all 0.125s ease-in-out);
+	@include transition(all 0.125s ease-in-out);
 }
 
 %font {

@@ -1,0 +1,13 @@
+.home {
+	header{
+		span {
+			opacity: 0;
+		}
+
+		&.active {
+			span {
+				opacity: 1;
+			}
+		}
+	}
+}
