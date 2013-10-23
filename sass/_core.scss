@@ -1,0 +1,9 @@
+html, body {
+	@include size(100%);
+	font-size: $font_size;
+	line-height: $line_height;
+}
+
+header {
+	@include size(100% $header_height);
+}
