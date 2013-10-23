@@ -16,6 +16,7 @@ header {
 	@include clearfix();
 	@include size(100% $header_height);
 	@include position(fixed, 0 0 0 0);
+	@include background-image(linear-gradient(rgba(#43332d, .5) 0, transparent 100%));
 	background-color: transparent;
 	padding: 0 $line_height/2;
 	line-height: $line_height*2;
@@ -34,6 +35,7 @@ header {
 	}
 
 	&.active {
+		background-image: none;
 		background-color: $light_color;
 
 		a {
@@ -55,6 +57,9 @@ header {
 }
 
 #marquee {
-	background-color: red;
+	background-image: url("../images/wood_backdrop.jpg");
+	background-size: cover;
+	background-position: center center;
 	height: $header_height*7;
+	line-height: $header_height*7;
 }

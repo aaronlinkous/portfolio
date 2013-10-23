@@ -1,0 +1,23 @@
+button {
+	@extend %animated;
+	@include appearance(none);
+	background-color: $accent_color;
+	border: 3px solid transparent;
+	font-size: 1rem;
+	height: $header_height;
+	width: $header_height*3;
+	color: $light_color;
+	cursor: pointer;
+
+	&:hover, &.reversed {
+		background-color: transparent;
+		border: 3px solid $light_color;
+	}
+
+	&.reversed {
+		&:hover {
+			background-color: $accent_color;
+			border: 3px solid transparent;
+		}
+	}
+}
