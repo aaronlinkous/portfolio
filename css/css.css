@@ -94,7 +94,7 @@ button, .fake_button {
   background-color: #08c882;
   border: 3px solid transparent;
   font-size: 16px;
-  line-height: 50px;
+  line-height: 47px;
   color: #f0f0f0;
   text-align: center;
   cursor: pointer;
@@ -186,15 +186,29 @@ header nav {
   background-size: cover;
   background-position: center center;
   height: 350px;
-  line-height: 350px;
+  font-size: 0;
 }
 /* line 68, ../sass/_core.scss */
+#marquee:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+/* line 75, ../sass/_core.scss */
+#marquee .centered {
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 81, ../sass/_core.scss */
 #marquee .fake_button {
-  float: left;
+  display: inline-block;
   background-color: transparent;
   border-color: #f0f0f0;
+  margin: 0 25px;
 }
-/* line 73, ../sass/_core.scss */
+/* line 87, ../sass/_core.scss */
 #marquee .fake_button:hover {
   background-color: #08c882;
   border-color: transparent;

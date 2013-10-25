@@ -63,12 +63,26 @@ header {
 	background-size: cover;
 	background-position: center center;
 	height: $header_height*7;
-	line-height: $header_height*7;
+	font-size: 0;
+
+	&:before {
+		content: '';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle; 
+	}
+
+	.centered {
+		width: 100%;
+		display: inline-block;
+		vertical-align: middle;
+	}
 
 	.fake_button {
-		float: left;
+		display: inline-block;
 		background-color: transparent;
 		border-color: $light_color;
+		margin: 0 $header_height/2;
 
 		&:hover {
 			background-color: $accent_color;

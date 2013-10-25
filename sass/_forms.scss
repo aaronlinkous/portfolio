@@ -6,7 +6,7 @@ button, .fake_button {
 	background-color: $accent_color;
 	border: 3px solid transparent;
 	font-size: $font_size;
-	line-height: $header_height;
+	line-height: $header_height - 3px; //compensate for border
 	color: $light_color;
 	text-align: center;
 	cursor: pointer;
