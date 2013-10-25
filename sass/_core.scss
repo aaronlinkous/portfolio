@@ -1,4 +1,5 @@
 html, body {
+	@extend %font;
 	@include size(100%);
 	margin: 0;
 	padding: 0;
@@ -57,9 +58,21 @@ header {
 }
 
 #marquee {
+	text-align: center;
 	background-image: url("../images/wood_backdrop.jpg");
 	background-size: cover;
 	background-position: center center;
 	height: $header_height*7;
 	line-height: $header_height*7;
+
+	button {
+		float: left;
+		background-color: transparent;
+		border-color: $light_color;
+
+		&:hover {
+			background-color: $accent_color;
+			border-color: transparent;
+		}
+	}
 }

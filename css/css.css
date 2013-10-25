@@ -15,7 +15,7 @@ a, button, header {
 }
 
 /* line 24, ../sass/_variables.scss */
-h1, h2, h3, h4, h5, h6, li, p {
+h1, h2, h3, h4, h5, h6, li, p, html, body {
   font-family: "proxima-nova",sans-serif;
   font-weight: 300;
   color: #1e1f2b;
@@ -88,6 +88,7 @@ button {
   -ms-appearance: none;
   -o-appearance: none;
   appearance: none;
+  display: block;
   background-color: #08c882;
   border: 3px solid transparent;
   font-size: 1rem;
@@ -96,15 +97,9 @@ button {
   color: #f0f0f0;
   cursor: pointer;
 }
-/* line 12, ../sass/_forms.scss */
-button:hover, button.reversed {
-  background-color: transparent;
-  border: 3px solid #f0f0f0;
-}
-/* line 18, ../sass/_forms.scss */
-button.reversed:hover {
-  background-color: #08c882;
-  border: 3px solid transparent;
+/* line 13, ../sass/_forms.scss */
+button:hover {
+  background-color: #07af72;
 }
 
 /* line 1, ../sass/_core.scss */
@@ -118,14 +113,14 @@ html, body {
   line-height: 25px;
 }
 
-/* line 10, ../sass/_core.scss */
+/* line 11, ../sass/_core.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 14, ../sass/_core.scss */
+/* line 15, ../sass/_core.scss */
 header {
   *zoom: 1;
   width: 100%;
@@ -146,48 +141,60 @@ header:before, header:after {
 header:after {
   clear: both;
 }
-/* line 24, ../sass/_core.scss */
+/* line 25, ../sass/_core.scss */
 header a {
   color: #f0f0f0;
 }
-/* line 27, ../sass/_core.scss */
+/* line 28, ../sass/_core.scss */
 header a:hover {
   color: #08c882 !important;
   text-decoration: none;
 }
-/* line 33, ../sass/_core.scss */
+/* line 34, ../sass/_core.scss */
 header span {
   color: rgba(240, 240, 240, 0.6);
 }
-/* line 37, ../sass/_core.scss */
+/* line 38, ../sass/_core.scss */
 header.active {
   background-image: none;
   background-color: #f0f0f0;
 }
-/* line 41, ../sass/_core.scss */
+/* line 42, ../sass/_core.scss */
 header.active a {
   color: #1e1f2b;
 }
-/* line 45, ../sass/_core.scss */
+/* line 46, ../sass/_core.scss */
 header.active span {
   color: #8a8a95;
 }
-/* line 50, ../sass/_core.scss */
+/* line 51, ../sass/_core.scss */
 header #name {
   float: left;
 }
-/* line 54, ../sass/_core.scss */
+/* line 55, ../sass/_core.scss */
 header nav {
   float: right;
 }
 
-/* line 59, ../sass/_core.scss */
+/* line 60, ../sass/_core.scss */
 #marquee {
+  text-align: center;
   background-image: url("../images/wood_backdrop.jpg");
   background-size: cover;
   background-position: center center;
   height: 350px;
   line-height: 350px;
+}
+/* line 68, ../sass/_core.scss */
+#marquee button {
+  float: left;
+  background-color: transparent;
+  border-color: #f0f0f0;
+}
+/* line 73, ../sass/_core.scss */
+#marquee button:hover {
+  background-color: #08c882;
+  border-color: transparent;
 }
 
 /* line 3, ../sass/_home.scss */

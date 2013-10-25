@@ -1,6 +1,7 @@
 button {
 	@extend %animated;
 	@include appearance(none);
+	display: block;
 	background-color: $accent_color;
 	border: 3px solid transparent;
 	font-size: 1rem;
@@ -9,15 +10,7 @@ button {
 	color: $light_color;
 	cursor: pointer;
 
-	&:hover, &.reversed {
-		background-color: transparent;
-		border: 3px solid $light_color;
-	}
-
-	&.reversed {
-		&:hover {
-			background-color: $accent_color;
-			border: 3px solid transparent;
-		}
+	&:hover {
+		background-color: darken($accent_color, 5%);
 	}
 }
