@@ -5,7 +5,7 @@ button, .fake_button {
 	display: block;
 	background-color: $accent_color;
 	border: 3px solid transparent;
-	font-size: 1rem;
+	font-size: $font_size;
 	line-height: $header_height;
 	color: $light_color;
 	text-align: center;

@@ -25,19 +25,19 @@ h1, h2, h3, h4, h5, h6, li, p, html, body {
 /* line 6, ../sass/_type.scss */
 h1, h2 {
   color: #1e1f2b;
-  font-size: 3rem;
+  font-size: 48px;
   font-weight: 500;
 }
 
 /* line 12, ../sass/_type.scss */
 h2 {
-  font-size: 1.25rem;
+  font-size: 20px;
   font-weight: 300;
 }
 
 /* line 17, ../sass/_type.scss */
 h3, h4, h5, h6 {
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 /* line 21, ../sass/_type.scss */
@@ -93,7 +93,7 @@ button, .fake_button {
   display: block;
   background-color: #08c882;
   border: 3px solid transparent;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 50px;
   color: #f0f0f0;
   text-align: center;

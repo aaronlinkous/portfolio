@@ -5,17 +5,17 @@ h1, h2, h3, h4, h5, h6, li, p {
 
 h1, h2 {
 	color: $dark_color;
-	font-size: 3rem;
+	font-size: $font_size*3;
 	font-weight: 500;
 }
 
 h2 {
-	font-size: 1.25rem;
+	font-size: $font_size*1.25;
 	font-weight: 300;
 }
 
 h3, h4, h5, h6 {
-	font-size: 1rem;
+	font-size: 1em;
 }
 
 ul {
