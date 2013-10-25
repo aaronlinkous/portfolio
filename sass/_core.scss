@@ -65,7 +65,7 @@ header {
 	height: $header_height*7;
 	line-height: $header_height*7;
 
-	button {
+	.fake_button {
 		float: left;
 		background-color: transparent;
 		border-color: $light_color;

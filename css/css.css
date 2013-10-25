@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6, li, p {
 }
 
 /* line 20, ../sass/_variables.scss */
-a, button, header {
+a, button, .fake_button, header {
   -webkit-transition: all 0.125s ease-in-out;
   -moz-transition: all 0.125s ease-in-out;
   transition: all 0.125s ease-in-out;
@@ -82,24 +82,27 @@ a:hover {
 }
 
 /* line 1, ../sass/_forms.scss */
-button {
+button, .fake_button {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   -o-appearance: none;
   appearance: none;
+  width: 150px;
+  height: 50px;
   display: block;
   background-color: #08c882;
   border: 3px solid transparent;
   font-size: 1rem;
-  height: 50px;
-  width: 150px;
+  line-height: 50px;
   color: #f0f0f0;
+  text-align: center;
   cursor: pointer;
 }
-/* line 13, ../sass/_forms.scss */
-button:hover {
+/* line 14, ../sass/_forms.scss */
+button:hover, .fake_button:hover {
   background-color: #07af72;
+  text-decoration: none;
 }
 
 /* line 1, ../sass/_core.scss */
@@ -186,13 +189,13 @@ header nav {
   line-height: 350px;
 }
 /* line 68, ../sass/_core.scss */
-#marquee button {
+#marquee .fake_button {
   float: left;
   background-color: transparent;
   border-color: #f0f0f0;
 }
 /* line 73, ../sass/_core.scss */
-#marquee button:hover {
+#marquee .fake_button:hover {
   background-color: #08c882;
   border-color: transparent;
 }

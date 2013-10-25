@@ -1,16 +1,18 @@
-button {
+button, .fake_button {
 	@extend %animated;
 	@include appearance(none);
+	@include size($header_height*3 $header_height);
 	display: block;
 	background-color: $accent_color;
 	border: 3px solid transparent;
 	font-size: 1rem;
-	height: $header_height;
-	width: $header_height*3;
+	line-height: $header_height;
 	color: $light_color;
+	text-align: center;
 	cursor: pointer;
 
 	&:hover {
 		background-color: darken($accent_color, 5%);
+		text-decoration: none;
 	}
 }
