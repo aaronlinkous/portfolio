@@ -1,4 +1,4 @@
-/* line 12, ../sass/_variables.scss */
+/* line 13, ../sass/_variables.scss */
 h1, h2, h3, h4, h5, h6, li, p {
   -webkit-font-smoothing: antialiased;
   -webkit-font-feature-settings: 'liga', 'dlig';
@@ -7,14 +7,14 @@ h1, h2, h3, h4, h5, h6, li, p {
   text-rendering: optimizeLegibility;
 }
 
-/* line 20, ../sass/_variables.scss */
+/* line 21, ../sass/_variables.scss */
 a, button, .fake_button, header {
   -webkit-transition: all 0.125s ease-in-out;
   -moz-transition: all 0.125s ease-in-out;
   transition: all 0.125s ease-in-out;
 }
 
-/* line 24, ../sass/_variables.scss */
+/* line 25, ../sass/_variables.scss */
 h1, h2, h3, h4, h5, h6, li, p, html, body {
   font-family: "proxima-nova",sans-serif;
   font-weight: 300;
@@ -92,9 +92,9 @@ button, .fake_button {
   height: 50px;
   display: block;
   background-color: #08c882;
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   font-size: 16px;
-  line-height: 47px;
+  line-height: 48px;
   color: #f0f0f0;
   text-align: center;
   cursor: pointer;

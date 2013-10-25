@@ -8,6 +8,7 @@ $font_size: 16px;
 $line_height: floor($font_size*$ratio);
 
 $header_height: $line_height*2;
+$border_width: 2px;
 
 %smooth {
 	-webkit-font-smoothing: antialiased;
