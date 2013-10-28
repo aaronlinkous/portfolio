@@ -9,6 +9,11 @@ h1, h2 {
 	font-weight: 500;
 }
 
+h1 {
+	font-family: "din-condensed-web",sans-serif;
+	text-transform: uppercase;
+}
+
 h2 {
 	font-size: $font_size*1.25;
 	font-weight: 300;
