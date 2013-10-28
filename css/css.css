@@ -17,7 +17,7 @@ a, button, .fake_button, header {
 /* line 25, ../sass/_variables.scss */
 h1, h2, h3, h4, h5, h6, li, p, html, body {
   font-family: "museo-sans-rounded",sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   color: #2d3244;
   line-height: 25px;
 }
