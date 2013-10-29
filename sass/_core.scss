@@ -12,6 +12,10 @@ html, body {
 	@include box-sizing(border-box);
 }
 
+.clear {
+	@include clearfix();
+}
+
 header {
 	@extend %animated;
 	@include clearfix();
@@ -20,7 +24,7 @@ header {
 	@include background-image(linear-gradient(rgba(#43332d, .5) 0, transparent 100%));
 	background-color: transparent;
 	padding: 0 $line_height/2;
-	line-height: $line_height*2;
+	line-height: $header_height;
 
 	a {
 		color: $light_color;
@@ -51,9 +55,32 @@ header {
 	#name {
 		float: left;
 	}
+}
 
-	nav {
-		float: right;
+nav {
+	float: right;
+
+	ul {
+		@include clearfix();
+		height: $header_height - $border_width;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	li {
+		float: left;
+		line-height: $header_height;
+		border-bottom: 0 solid transparent;
+
+		&:hover {
+			border-bottom: $border_width solid $accent_color;
+		}
+	}
+
+	a {
+		display: block;
+		padding: 0 $line_height/2;
 	}
 }
 

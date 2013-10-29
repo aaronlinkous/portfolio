@@ -1,7 +1,7 @@
 var header_height,marquee_height,height,width,time = 250;
 var titles = ["Sr. Developer", "UI & UX Designer", "Analogy Extraordinaire", "Project Manager"];
 
-function getSize() {
+function get_size() {
 	height = $(window).outerHeight();
 	width = $(window).outerWidth();
 
@@ -21,11 +21,11 @@ function loop_titles() {
 }
 
 $(document).ready(function(){
-	getSize();
+	get_size();
 	setTimeout(loop_titles, 2000);
 
 	$(window).resize(function(){
-		getSize();
+		get_size();
 	});
 
 	$(document).scroll(function() {
