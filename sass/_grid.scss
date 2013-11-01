@@ -1,0 +1,59 @@
+.row {
+	@include clearfix();
+	position: relative;
+	margin: 0 $line_height 1.5rem;
+
+	&.full_width {
+		width: auto;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.split {
+	@include display(flex);
+
+	> * {
+		@include flex(1);
+		position: relative;
+		width: 0; //this is required for some really odd reason
+		margin-right: $line_height;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	> .extra_width {
+		@include flex(2);
+	}
+
+	> .touching {
+		margin-right: 0;
+	}
+}
+
+.no_margin {
+	margin-bottom: 0 !important;
+}
+
+.quarter_margin {
+	margin-bottom: .375rem !important;
+}
+
+.half_margin {
+	margin-bottom: .75rem !important;
+}
+
+.extra_margin {
+	margin-top: 2rem !important;
+	margin-bottom: 1.75rem !important;
+}
+
+.centered {
+	margin: 0 auto;
+}

@@ -1,12 +1,19 @@
-var header_height,marquee_height,height,width,time = 250;
+var header_height,marquee_height,wh,ww,dh,dw,time = 250;
 var titles = ["Sr. Developer", "UI & UX Designer", "Analogy Extraordinaire", "Project Manager"];
 
 function get_size() {
-	height = $(window).outerHeight();
-	width = $(window).outerWidth();
+	wh = $(window).outerHeight();
+	ww = $(window).outerWidth();
+
+	dh = $(document).outerHeight();
+	dw = $(document).outerWidth();
 
 	header_height = $("header").outerHeight();
 	marquee_height = $("#marquee").outerHeight();
+
+	console.log(dh,wh);
+
+	dh <= wh ? $("footer").addClass("fixed") : $("footer").removeClass("fixed");
 }
 
 var i = 0;

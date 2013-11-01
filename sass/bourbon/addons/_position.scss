@@ -1,4 +1,4 @@
-@mixin position ($position: relative, $coordinates: 0 0 0 0, $z:false) {
+@mixin position ($position: relative, $coordinates: 0 0 0 0, $z:"") {
 
   @if type-of($position) == list {
     $coordinates: $position;
@@ -40,7 +40,7 @@
     left: $left;
   }
 
-  @if $z != null {
+  @if $z != "" {
 	  z-index: $z;
   }
 }

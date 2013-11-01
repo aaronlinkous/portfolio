@@ -8,6 +8,7 @@ $font_size: 16px;
 $line_height: floor($font_size*$ratio);
 
 $header_height: $line_height*2;
+$footer_height: $header_height*2;
 $border_width: 2px;
 
 %smooth {
@@ -24,7 +25,7 @@ $border_width: 2px;
 
 %font {
 	@extend %smooth;
-	font-family: "museo-sans-rounded",sans-serif;
+	font-family: "museo-sans-rounded", sans-serif;
 	font-weight: 500;
 	color: $dark_color;
 	line-height: $line_height;
