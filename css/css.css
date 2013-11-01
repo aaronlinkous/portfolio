@@ -420,34 +420,32 @@ footer li {
 footer a {
   display: block;
   height: 100%;
-  color: #fff;
-  text-decoration: none !important;
 }
-/* line 173, ../sass/_core.scss */
+/* line 171, ../sass/_core.scss */
 footer span {
   display: none;
 }
-/* line 177, ../sass/_core.scss */
+/* line 175, ../sass/_core.scss */
 footer #git {
   background-image: url("../images/git.svg");
 }
-/* line 180, ../sass/_core.scss */
+/* line 178, ../sass/_core.scss */
 footer #git:hover {
   background-color: #60B044;
 }
-/* line 185, ../sass/_core.scss */
+/* line 183, ../sass/_core.scss */
 footer #dribbble {
   background-image: url("../images/dribbble.svg");
 }
-/* line 188, ../sass/_core.scss */
+/* line 186, ../sass/_core.scss */
 footer #dribbble:hover {
   background-color: #EA4C89;
 }
-/* line 193, ../sass/_core.scss */
+/* line 191, ../sass/_core.scss */
 footer #linkedin {
   background-image: url("../images/linkedin.svg");
 }
-/* line 196, ../sass/_core.scss */
+/* line 194, ../sass/_core.scss */
 footer #linkedin:hover {
   background-color: #069;
 }
