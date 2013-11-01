@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6, li, p, html, body {
 }
 
 /* line 22, ../sass/_variables.scss */
-a, button, .fake_button, header {
+a, button, .fake_button, header, footer li {
   -webkit-transition: all 0.125s ease-in-out;
   -moz-transition: all 0.125s ease-in-out;
   transition: all 0.125s ease-in-out;
@@ -119,7 +119,7 @@ h1, h2, h3, h4, h5, h6, li, p, html, body {
 /* line 6, ../sass/_type.scss */
 h1, h2 {
   color: #2d3244;
-  font-size: 48px;
+  font-size: 80px;
   font-weight: 500;
 }
 
@@ -288,13 +288,14 @@ header.active span {
 /* line 55, ../sass/_core.scss */
 header #name {
   float: left;
+  width: 300px;
 }
 
-/* line 60, ../sass/_core.scss */
+/* line 61, ../sass/_core.scss */
 nav {
   float: right;
 }
-/* line 63, ../sass/_core.scss */
+/* line 64, ../sass/_core.scss */
 nav ul {
   *zoom: 1;
   height: 48px;
@@ -311,23 +312,23 @@ nav ul:before, nav ul:after {
 nav ul:after {
   clear: both;
 }
-/* line 71, ../sass/_core.scss */
+/* line 72, ../sass/_core.scss */
 nav li {
   float: left;
   line-height: 50px;
   border-bottom: 0 solid transparent;
 }
-/* line 76, ../sass/_core.scss */
+/* line 77, ../sass/_core.scss */
 nav li:hover {
   border-bottom: 4px solid #08c882;
 }
-/* line 81, ../sass/_core.scss */
+/* line 82, ../sass/_core.scss */
 nav a {
   display: block;
   padding: 0 12.5px;
 }
 
-/* line 87, ../sass/_core.scss */
+/* line 88, ../sass/_core.scss */
 #marquee {
   width: 100%;
   height: 350px;
@@ -337,49 +338,51 @@ nav a {
   background-position: center center;
   font-size: 0;
 }
-/* line 95, ../sass/_core.scss */
+/* line 96, ../sass/_core.scss */
 #marquee:before {
   content: '';
   display: inline-block;
   height: 100%;
   vertical-align: middle;
 }
-/* line 102, ../sass/_core.scss */
+/* line 103, ../sass/_core.scss */
 #marquee.fixed {
   position: fixed;
 }
-/* line 105, ../sass/_core.scss */
+/* line 106, ../sass/_core.scss */
 #marquee.fixed + #wrapper {
   position: absolute;
   top: 350px;
   z-index: 2;
 }
-/* line 110, ../sass/_core.scss */
+/* line 111, ../sass/_core.scss */
 #marquee .centered {
   width: 100%;
   display: inline-block;
   vertical-align: middle;
 }
-/* line 116, ../sass/_core.scss */
+/* line 117, ../sass/_core.scss */
 #marquee .fake_button {
   display: inline-block;
   background-color: transparent;
   border-color: #f0f0f0;
   margin: 0 25px;
+  text-shadow: 1px 1px 1px rgba(45, 50, 68, 0.5);
 }
-/* line 122, ../sass/_core.scss */
+/* line 124, ../sass/_core.scss */
 #marquee .fake_button:hover {
   background-color: #08c882;
   border-color: transparent;
+  text-shadow: none;
 }
 
-/* line 129, ../sass/_core.scss */
+/* line 132, ../sass/_core.scss */
 #wrapper {
   background-color: #f0f0f0;
   width: 100%;
 }
 
-/* line 134, ../sass/_core.scss */
+/* line 137, ../sass/_core.scss */
 #content {
   position: relative;
   top: 0px;
@@ -387,26 +390,66 @@ nav a {
   padding: 25px 12.5px;
 }
 
-/* line 139, ../sass/_core.scss */
+/* line 142, ../sass/_core.scss */
 footer {
   width: 100%;
   height: 100px;
+  background-color: #b2b2b9;
 }
-/* line 142, ../sass/_core.scss */
+/* line 146, ../sass/_core.scss */
 footer.fixed {
   position: fixed;
   bottom: 0px;
 }
-/* line 146, ../sass/_core.scss */
+/* line 150, ../sass/_core.scss */
 footer ul {
   list-style: none;
   margin: 0;
   padding: 0;
   height: 100%;
 }
-/* line 153, ../sass/_core.scss */
+/* line 157, ../sass/_core.scss */
 footer li {
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
   height: 100%;
+}
+/* line 166, ../sass/_core.scss */
+footer a {
+  display: block;
+  height: 100%;
+  color: #fff;
+  text-decoration: none !important;
+}
+/* line 173, ../sass/_core.scss */
+footer span {
+  display: none;
+}
+/* line 177, ../sass/_core.scss */
+footer #git {
+  background-image: url("../images/git.svg");
+}
+/* line 180, ../sass/_core.scss */
+footer #git:hover {
+  background-color: #60B044;
+}
+/* line 185, ../sass/_core.scss */
+footer #dribbble {
+  background-image: url("../images/dribbble.svg");
+}
+/* line 188, ../sass/_core.scss */
+footer #dribbble:hover {
+  background-color: #EA4C89;
+}
+/* line 193, ../sass/_core.scss */
+footer #linkedin {
+  background-image: url("../images/linkedin.svg");
+}
+/* line 196, ../sass/_core.scss */
+footer #linkedin:hover {
+  background-color: #069;
 }
 
 /* line 3, ../sass/_home.scss */
