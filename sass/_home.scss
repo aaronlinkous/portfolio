@@ -22,17 +22,11 @@
 			position: relative;
 			float: left;
 			width: 25%;
-			min-width: 256px;
-			min-height: 256px;
 			background-color: $ghosted_color;
 
 			* {
 				@extend %animated;
 				@include size(100% 100%);
-			}
-
-			&:nth-child(5n) {
-				clear: left;
 			}
 
 			a {
@@ -62,4 +56,36 @@
 		opacity: 0;
 		background-color: rgba(blue, .5);
 	}
+
+	/* #1- Large desktop */
+	@media screen and (min-width: 1400px) {
+		#work_grid li {
+			width: 20%;
+		}
+	}
+
+	/* #3- Regular sized laptops */
+	@media screen and (min-width: 980px) and (max-width: 1199px) {
+	
+	}
+	
+	/* #3- Portrait tablet to landscape and desktop */
+	@media screen and (min-width: 768px) and (max-width: 979px) {
+	
+	}
+	
+	/* #4- Landscape phone to portrait tablet */
+	@media screen and (max-width: 767px) {
+		#work_grid li {
+			width: 33%;
+		}
+	}
+	
+	/* #5- Landscape phones and down */
+	@media screen and (max-width: 480px) {
+		#work_grid li {
+			width: 50%;
+		}
+	}
+
 }
