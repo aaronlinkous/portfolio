@@ -11,8 +11,6 @@ function get_size() {
 	header_height = $("header").outerHeight();
 	marquee_height = $("#marquee").outerHeight();
 
-	console.log(dh,wh);
-
 	dh <= wh ? $("footer").addClass("fixed") : $("footer").removeClass("fixed");
 }
 

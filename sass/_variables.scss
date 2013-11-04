@@ -11,6 +11,12 @@ $header_height: $line_height*2;
 $footer_height: $header_height*2;
 $border_width: 2px;
 
+$large_screen: 1200px;
+$tablet_l: 1024px;
+$tablet_p: 768px;
+$mobile_l: 568px;
+$mobile_p: 360px;
+
 %smooth {
 	-webkit-font-smoothing: antialiased;
 	-webkit-font-feature-settings: 'liga', 'dlig';

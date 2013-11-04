@@ -30,7 +30,8 @@
 			}
 
 			a {
-				@include position(absolute, 0px 0px 0px 0px, 2);
+				@include position(absolute, 0 0 0px 0, 2);
+				opacity: 0;
 				display: block;
 				color: #fff;
 				text-decoration: none !important;
@@ -53,39 +54,43 @@
 	}
 
 	#bahamar a {
-		opacity: 0;
 		background-color: rgba(blue, .5);
 	}
 
-	/* #1- Large desktop */
-	@media screen and (min-width: 1400px) {
+	@media screen and (min-width: $large_screen) {
 		#work_grid li {
 			width: 20%;
 		}
 	}
 
-	/* #3- Regular sized laptops */
-	@media screen and (min-width: 980px) and (max-width: 1199px) {
-	
-	}
-	
-	/* #3- Portrait tablet to landscape and desktop */
-	@media screen and (min-width: 768px) and (max-width: 979px) {
-	
-	}
-	
-	/* #4- Landscape phone to portrait tablet */
-	@media screen and (max-width: 767px) {
+	@media screen and (max-device-width: $tablet_l){
 		#work_grid li {
-			width: 33%;
+			width: 25%;
+
+			a {
+				opacity: 1;
+				height: 25px;
+			}
 		}
 	}
-	
-	/* #5- Landscape phones and down */
-	@media screen and (max-width: 480px) {
+
+	@media screen and (max-width: $tablet_p) {
+		#work_grid li {
+			width: 33.3333%;
+		}
+	}
+
+	@media screen and (max-width: $mobile_l) {
 		#work_grid li {
 			width: 50%;
 		}
 	}
+
+	@media screen and (max-width: $mobile_p) {
+		#work_grid li {
+			width: 100%;
+		}
+	}
+
 
 }
