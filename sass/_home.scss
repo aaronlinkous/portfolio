@@ -11,6 +11,10 @@
 		}
 	}
 
+	#marquee {
+		background-image: url("../images/wood_backdrop.jpg");
+	}
+
 	#work_grid {
 		@include clearfix();
 		max-width: 100%;
