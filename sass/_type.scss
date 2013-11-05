@@ -7,6 +7,10 @@ h1, h2 {
 	color: $dark_color;
 	font-size: $font_size*5;
 	font-weight: 500;
+
+	&.light {
+		color: $light_color;
+	}
 }
 
 h1 {

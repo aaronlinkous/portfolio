@@ -122,61 +122,65 @@ h1, h2 {
   font-size: 80px;
   font-weight: 500;
 }
+/* line 11, ../sass/_type.scss */
+h1.light, h2.light {
+  color: #f0f0f0;
+}
 
-/* line 12, ../sass/_type.scss */
+/* line 16, ../sass/_type.scss */
 h1 {
   font-family: "din-condensed-web",sans-serif;
   text-transform: uppercase;
 }
 
-/* line 17, ../sass/_type.scss */
+/* line 21, ../sass/_type.scss */
 h2 {
   font-size: 1.25em;
   font-weight: 300;
 }
 
-/* line 22, ../sass/_type.scss */
+/* line 26, ../sass/_type.scss */
 h3, h4, h5, h6 {
   font-size: 1em;
 }
 
-/* line 26, ../sass/_type.scss */
+/* line 30, ../sass/_type.scss */
 ul {
   margin-top: 0;
   padding-left: 1em;
 }
 
-/* line 31, ../sass/_type.scss */
+/* line 35, ../sass/_type.scss */
 li, p {
   font-size: 1em;
   margin: 0 0 1.5em 0;
 }
-/* line 35, ../sass/_type.scss */
+/* line 39, ../sass/_type.scss */
 li:last-child, p:last-child {
   margin-bottom: 0;
 }
 
-/* line 40, ../sass/_type.scss */
+/* line 44, ../sass/_type.scss */
 li {
   margin-bottom: 0;
 }
 
-/* line 44, ../sass/_type.scss */
+/* line 48, ../sass/_type.scss */
 a {
   color: #08c882;
   text-decoration: none;
 }
-/* line 49, ../sass/_type.scss */
+/* line 53, ../sass/_type.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 54, ../sass/_type.scss */
+/* line 58, ../sass/_type.scss */
 .larger {
   font-size: 1.25em;
 }
 
-/* line 58, ../sass/_type.scss */
+/* line 62, ../sass/_type.scss */
 .smaller {
   font-size: .9em;
 }
