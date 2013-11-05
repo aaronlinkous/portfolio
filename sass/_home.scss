@@ -23,26 +23,51 @@
 			float: left;
 			width: 25%;
 			background-color: $ghosted_color;
+			text-align: center;
 
 			* {
 				@extend %animated;
-				@include size(100% 100%);
 			}
 
 			a {
+				@include size(100% 100%);
 				@include position(absolute, 0 0 0px 0, 2);
 				opacity: 0;
 				display: block;
 				color: #fff;
 				text-decoration: none !important;
+
+				&:before {
+					content: '';
+					display: inline-block;
+					height: 100%;
+					vertical-align: middle; 
+				}
 			}
 
-			img {
+			div {
+				font-family: $headline_font;
+				text-shadow: 0 0 25px $dark_color;
+				font-size: 2em;
+				line-height: 1em;
+				padding: 0 $line_height/2;
+				width: 100%;
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			span {
+				@include position(absolute, 0px 0 0 0,-1);
+				opacity: 0;
+			}
+
+			img,span {
+				@include size(100% 100%);
 				display: block;
 			}
 
 			&:hover {
-				a {
+				a, span {
 					opacity: 1;
 				}
 
@@ -53,8 +78,48 @@
 		}
 	}
 
-	#bahamar a {
-		background-color: rgba(blue, .5);
+	#flowers span {
+		background-color: rgba(#572C80, .75);
+	}
+
+	#fnm span {
+		background-color: rgba(#E6213D, .75);
+	}
+
+	#famous span {
+		background-color: rgba(#B90101, .75);
+	}
+
+	#bahamar span {
+		background-color: rgba(#009BC8, .75);
+	}
+
+	#florists span {
+		background-color: rgba(#03a784, .75);
+	}
+
+	#belterra span {
+		background-color: rgba(#a11b1c, .75);
+	}
+
+	#bilt span {
+		background-color: rgba(#f38c2d, .75);
+	}
+
+	#decklab span {
+		background-color: rgba(#323740, .75);
+	}
+
+	#lauberge span {
+		background-color: rgba(#b36531, .75);
+	}
+
+	#lumiere span {
+		background-color: rgba(#05456f, .75);
+	}
+
+	#delmar span {
+		background-color: rgba(#CC4C26, .75);
 	}
 
 	@media screen and (min-width: $large_screen) {
@@ -69,7 +134,22 @@
 
 			a {
 				opacity: 1;
-				height: 25px;
+			}
+
+			div {
+				@include position(absolute, 0 0 $line_height/2 0);
+				font-size: 1.25em;
+				line-height: 1.25em;
+				display: block;
+				text-shadow: 0 1px 1px $dark_color;
+			}
+
+			span {
+				top: auto;
+				bottom: 0;
+				height: $line_height*2;
+				background-color: rgba($dark_color, .5);
+				opacity: 1;
 			}
 		}
 	}

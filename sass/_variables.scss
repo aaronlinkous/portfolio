@@ -6,6 +6,7 @@ $accent_color: #08c882;
 $ratio: 1.6;
 $font_size: 16px;
 $line_height: floor($font_size*$ratio);
+$headline_font: "din-condensed-web",sans-serif;
 
 $header_height: $line_height*2;
 $footer_height: $header_height*2;
