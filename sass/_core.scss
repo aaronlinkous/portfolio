@@ -136,7 +136,7 @@ nav {
 
 #content {
 	@include position(relative, 0px 0 $footer_height 0);
-	padding: $line_height 0 $footer_height+$line_height;
+	padding: $line_height 0;
 }
 
 footer {
@@ -193,6 +193,44 @@ footer {
 
 		&:hover {
 			background-color: #069;
+		}
+	}
+}
+
+@media screen and (max-width: $mobile_l) {
+	#name {
+		width: auto !important;
+
+		.smaller {
+			display: none;
+		}
+	}
+
+	nav {
+		@include size($header_height $header_height);
+
+		ul {
+			@include position(absolute, $header_height 0px 0 0px, 2);
+			background-color: none;
+			display: none;
+			height: auto;
+		}
+
+		li {
+			background: rgba($dark_color, .75);
+			border-bottom: 2px solid $light_color !important;
+			float: none;
+			width: 100%;
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+
+		&.open {
+			ul {
+				display: block;
+			}
 		}
 	}
 }

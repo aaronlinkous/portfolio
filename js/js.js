@@ -1,4 +1,4 @@
-var header_height,marquee_height,wh,ww,dh,dw,time = 250;
+var header_height,marquee_height,wh,ww,dh,dw,time = 250, mobile_l = 568;
 var titles = ["Sr. Developer", "UI & UX Designer", "Analogy Extraordinaire", "Project Manager"];
 
 function get_size() {
@@ -35,5 +35,11 @@ $(document).ready(function(){
 
 	$(document).scroll(function() {
 		$("header").toggleClass("active", $(document).scrollTop() >= (marquee_height - header_height));
+	});
+
+	$("nav").on("click", function(e) {
+		if(ww <= mobile_l) {
+			$(this).toggleClass("open");
+		}
 	});
 });
