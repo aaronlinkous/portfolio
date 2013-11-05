@@ -1,4 +1,4 @@
-var header_height,marquee_height,wh,ww,dh,dw,time = 250, mobile_l = 568;
+var mobile, header_height,marquee_height,wh,ww,dh,dw,time = 250,mobile_l = 568;
 var titles = ["Sr. Developer", "UI & UX Designer", "Analogy Extraordinaire", "Project Manager"];
 
 function get_size() {
@@ -12,6 +12,8 @@ function get_size() {
 	marquee_height = $("#marquee").outerHeight();
 
 	dh <= wh ? $("footer").addClass("fixed") : $("footer").removeClass("fixed");
+
+	mobile = ww <= mobile_l ? 1 : 0;
 }
 
 var i = 0;
@@ -26,7 +28,7 @@ function loop_titles() {
 }
 
 $(document).ready(function(){
-	get_size();
+	setTimeout(get_size, 1500);
 	setTimeout(loop_titles, 2000);
 
 	$(window).resize(function(){
@@ -38,8 +40,6 @@ $(document).ready(function(){
 	});
 
 	$("nav").on("click", function(e) {
-		if(ww <= mobile_l) {
-			$(this).toggleClass("open");
-		}
+		if(mobile) $(this).toggleClass("open");
 	});
 });
