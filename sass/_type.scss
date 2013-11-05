@@ -5,8 +5,9 @@ h1, h2, h3, h4, h5, h6, li, p {
 
 h1, h2 {
 	color: $dark_color;
-	font-size: $font_size*5;
+	font-size: 5rem;
 	font-weight: 500;
+	line-height: 1em;
 
 	&.light {
 		color: $light_color;
@@ -14,13 +15,13 @@ h1, h2 {
 }
 
 h1 {
-	font-family: "din-condensed-web",sans-serif;
+	font-family: $headline_font;
 	text-transform: uppercase;
 }
 
 h2 {
-	font-size: 1.25em;
-	font-weight: 300;
+	font-size: 1.25rem;
+	font-weight: 700;
 }
 
 h3, h4, h5, h6 {

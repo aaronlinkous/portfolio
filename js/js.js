@@ -11,6 +11,8 @@ function get_size() {
 	header_height = $("header").outerHeight();
 	marquee_height = $("#marquee").outerHeight();
 
+	$("header").toggleClass("active", $(document).scrollTop() >= (marquee_height - header_height));
+
 	dh <= wh ? $("footer").addClass("fixed") : $("footer").removeClass("fixed");
 
 	mobile = ww <= mobile_l ? 1 : 0;
@@ -28,7 +30,7 @@ function loop_titles() {
 }
 
 $(document).ready(function(){
-	setTimeout(get_size, 1500);
+	setTimeout(get_size, 750);
 	setTimeout(loop_titles, 2000);
 
 	$(window).resize(function(){
