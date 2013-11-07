@@ -173,12 +173,29 @@
 	}
 
 	@media screen and (max-width: $mobile_l) {
+		#marquee {
+			.fake_button {
+				position: absolute;
+				bottom: 20px;
+				margin: 0;
+
+				&:first-of-type {
+					left: $line_height/2;
+				}
+
+				&:last-of-type {
+					right: $line_height/2;
+				}
+			}
+		}
+
 		#work_grid li {
 			width: 50%;
 		}
 	}
 
 	@media screen and (max-width: $mobile_p) {
+
 		#work_grid li {
 			width: 100%;
 		}

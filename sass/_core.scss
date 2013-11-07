@@ -1,4 +1,5 @@
 html, body {
+	@include transition(all 0.75s $ease-out-quint);
 	@extend %font;
 	@include size(100%);
 	margin: 0;
@@ -70,12 +71,20 @@ nav {
 	}
 
 	li {
+		position: relative;
 		float: left;
-		line-height: $header_height - $border_width*4;
-		border-top: $border_width*2 solid transparent;
+		line-height: $header_height;
+
+		div {
+			@include position(absolute, 0px 0 0 0, 2);
+			@include size(100% $border_width*2);
+			background-color: transparent;
+		}
 
 		&:hover {
-			border-top-color: $accent_color;
+			div {
+				background-color: $accent_color;
+			}
 		}
 	}
 
@@ -201,8 +210,12 @@ footer {
 }
 
 @media screen and (max-width: $mobile_l) {
+	html, body {
+		font-size: .875em;
+	}
+
 	#name {
-		width: auto !important;
+		width: 200px !important;
 
 		.smaller {
 			display: none;
@@ -211,29 +224,54 @@ footer {
 
 	nav {
 		@include size($header_height $header_height);
+		background: url("../images/menu.svg") no-repeat bottom center;
 
 		ul {
-			@include position(absolute, $header_height 0px 0 0px, 2);
-			background-color: none;
-			display: none;
-			height: auto;
+			@include transition(all 0.75s $ease-out-quint);
+			@include size (auto 9em);
+			@include transform(translate3d(0, -9em, 0));
+			@include position(absolute, 0px 0px 0 0px);
+			font-size: 1rem !important;
+			text-align: center;
+			-webkit-filter: blur(5px);
+			opacity: 0;
 		}
 
 		li {
-			background: rgba($dark_color, .75);
-			border-bottom: 2px solid $light_color !important;
+			background-color: rgba($dark_color, .95);
+			line-height: 3em;
 			float: none;
 			width: 100%;
 
-			&:last-child {
-				border-bottom: none;
+			a {
+				color: #fff !important;
 			}
-		}
 
-		&.open {
-			ul {
-				display: block;
+			div {
+				top: auto;
+				bottom: 0;
+				background-color: darken($dark_color, 10%);
+				height: $border_width;
+			}
+
+			&:last-child {
+				display: none;
 			}
 		}
+	}
+
+	#marquee {
+		height: $header_height*6;
+		padding: 0 $line_height/2;
+
+		&.fixed + #wrapper {
+			top: $header_height*6;
+		}
+	}
+
+	.open nav ul {
+		@include transform(translate3d(0, $header_height, 0));
+		-webkit-filter: blur(0);
+		opacity: 1;
 	}
 }

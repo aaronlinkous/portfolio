@@ -16,3 +16,9 @@ button, .fake_button {
 		text-decoration: none;
 	}
 }
+
+@media screen and (max-width: $mobile_p) {
+	button, .fake_button {
+		width: $header_height*2;
+	}
+}
