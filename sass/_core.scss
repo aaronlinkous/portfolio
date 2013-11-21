@@ -247,7 +247,7 @@ footer {
 
 	nav {
 		@include size($header_height $header_height);
-		background: url("../images/menu.svg") no-repeat bottom center;
+		background: url("../images/menu.svg") no-repeat right bottom;
 
 		ul {
 			@include transition(all 0.75s $ease-out-quint);
