@@ -1,6 +1,7 @@
 h1, h2, h3, h4, h5, h6, li, p {
 	@extend %smooth;
 	@extend %font;
+	margin-top: 0;
 }
 
 h1, h2 {
@@ -20,7 +21,8 @@ h1 {
 }
 
 h2 {
-	font-size: 1.25rem;
+	font-size: 1.5rem;
+	line-height: 1.5em;
 	font-weight: 700;
 }
 
@@ -52,7 +54,7 @@ a {
 	text-decoration: none;
 
 	&:hover {
-		text-decoration: underline;
+		text-decoration: none;
 	}
 }
 

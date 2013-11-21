@@ -32,7 +32,6 @@ header {
 
 		&:hover {
 			color: $accent_color !important;
-			text-decoration: none;
 		}
 	}
 
@@ -125,30 +124,35 @@ nav {
 	h1 {
 		margin-bottom: .25em;
 	}
-
-	.fake_button {
-		display: inline-block;
-		background-color: transparent;
-		border-color: $light_color;
-		margin: 0 $header_height/2;
-		text-shadow: 1px 1px 1px rgba($dark_color, .5);
-
-		&:hover {
-			background-color: $accent_color;
-			border-color: transparent;
-			text-shadow: none;
-		}
-	}
 }
 
 #wrapper {
+	outline: $border_width*2 solid rgba($dark_color, .5);
 	background-color: $light_color;
 	width: 100%;
 }
 
+#intro {
+	max-width: $large_screen;
+	padding: $header_height;
+
+	p {
+		@include columns(2);
+		@include column-gap($header_height*2);
+	}
+
+	a {
+		&:hover {
+			background-color: $accent_color;
+			color: $light_color;
+			outline: 3px solid $accent_color;
+		}
+	}
+}
+
 #content {
 	@include position(relative, 0px 0 $footer_height 0);
-	padding: $line_height 0;
+	padding: 0 0 $header_height;
 }
 
 footer {
@@ -209,9 +213,28 @@ footer {
 	}
 }
 
+
+@media screen and (min-width: $large_screen) {
+	#intro {
+		margin: 0 auto;
+
+		p {
+			@include columns(1);
+		}
+	}
+}
+
+@media screen and (max-width: $tablet_p) {
+	#intro {	
+		p {
+			@include columns(1);
+		}
+	}
+}
+
 @media screen and (max-width: $mobile_l) {
 	html, body {
-		font-size: .875em;
+		font-size: $mobile_font_size;
 	}
 
 	#name {
@@ -267,6 +290,14 @@ footer {
 		&.fixed + #wrapper {
 			top: $header_height*6;
 		}
+	}
+
+	#intro {
+		padding: $header_height/4;
+	}
+
+	#content {
+		padding: 0;
 	}
 
 	.open nav ul {

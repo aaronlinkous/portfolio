@@ -17,6 +17,22 @@ button, .fake_button {
 	}
 }
 
+#marquee {
+	.fake_button {
+		display: inline-block;
+		color: $dark_color;
+		background-color: rgba($light_color, .15);
+		border-color: $dark_color;
+		margin: 0 $header_height/2;
+
+		&:hover {
+			color: $light_color;
+			background-color: $accent_color;
+			border-color: transparent;
+		}
+	}
+}
+
 @media screen and (max-width: $mobile_p) {
 	button, .fake_button {
 		width: $header_height*2;

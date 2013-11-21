@@ -1,5 +1,5 @@
 var mobile, header_height,marquee_height,wh,ww,dh,dw,time = 250,mobile_l = 568;
-var titles = ["Sr. Developer", "UI & UX Designer", "Analogy Extraordinaire", "Project Manager"];
+var titles = ["Sr. Developer", "UI & UX Designer", "CSS > * Believer", "Analogy Extraordinaire", "Project Manager", "Car Guy"];
 
 function get_size() {
 	wh = $(window).outerHeight();
