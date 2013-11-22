@@ -76,8 +76,12 @@ a {
 	font-size: .9em;
 }
 
-@media screen and (max-width: $mobile_l) {
+@media screen and (max-width: $tablet_p) {
 	h1 {
 		font-size: 3.75rem;
+	}
+
+	h2 {
+		font-size: 1.25em;
 	}
 }

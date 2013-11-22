@@ -94,6 +94,9 @@ nav {
 }
 
 #marquee {
+	@extend %animated;
+	@include display(flex);
+	@include align-items(center);
 	@include size(100% $header_height*7);
 	text-align: center;
 	background-size: cover;
@@ -115,20 +118,19 @@ nav {
 		}
 	}
 
-	.centered {
-		width: 100%;
-		display: inline-block;
-		vertical-align: middle;
-	}
-
 	h1 {
 		margin-bottom: .25em;
+	}
+
+	.left {
+		text-align: left;
+		padding-right: 50%;
+		padding-left: $header_height;
 	}
 }
 
 #wrapper {
-	outline: $border_width*2 solid rgba($dark_color, .5);
-	background-color: $light_color;
+	border-top: $border_width*2 solid rgba($dark_color, .5);
 	width: 100%;
 }
 
@@ -152,6 +154,7 @@ nav {
 
 #content {
 	@include position(relative, 0px 0 $footer_height 0);
+	background-color: $light_color;
 	padding: 0 0 $header_height;
 }
 
