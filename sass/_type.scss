@@ -69,11 +69,11 @@ a {
 }
 
 .larger {
-	font-size: 1.25em;
+	@extend %larger;
 }
 
 .smaller {
-	font-size: .9em;
+	@extend %smaller;
 }
 
 @media screen and (max-width: $tablet_p) {

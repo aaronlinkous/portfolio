@@ -22,6 +22,16 @@ h1, h2, h3, h4, h5, h6, li, p, html, body {
   line-height: 25px;
 }
 
+/* line 42, ../sass/_variables.scss */
+.larger {
+  font-size: 1.25em;
+}
+
+/* line 46, ../sass/_variables.scss */
+.smaller {
+  font-size: .9em;
+}
+
 /* line 1, ../sass/_grid.scss */
 .row {
   *zoom: 1;
@@ -191,16 +201,6 @@ a:hover {
   text-decoration: none;
 }
 
-/* line 71, ../sass/_type.scss */
-.larger {
-  font-size: 1.25em;
-}
-
-/* line 75, ../sass/_type.scss */
-.smaller {
-  font-size: .9em;
-}
-
 @media screen and (max-width: 768px) {
   /* line 80, ../sass/_type.scss */
   h1 {
@@ -240,7 +240,7 @@ button:hover, .fake_button:hover {
 #marquee .fake_button {
   display: inline-block;
   color: #2d3244;
-  background-color: rgba(240, 240, 240, 0.15);
+  background-color: rgba(240, 240, 240, 0.35);
   border-color: #2d3244;
   margin: 0 25px;
 }
@@ -252,8 +252,8 @@ button:hover, .fake_button:hover {
 }
 
 @media screen and (max-width: 360px) {
-  /* line 37, ../sass/_forms.scss */
-  button, .fake_button {
+  /* line 38, ../sass/_forms.scss */
+  #marquee .fake_button {
     width: 100px;
   }
 }
@@ -411,51 +411,55 @@ nav a {
   -ms-flex-align: center;
   width: 100%;
   height: 350px;
-  text-align: center;
   background-size: cover;
   background-position: center center;
   font-size: 0;
 }
-/* line 106, ../sass/_core.scss */
+/* line 105, ../sass/_core.scss */
 #marquee:before {
   content: '';
   display: inline-block;
   height: 100%;
   vertical-align: middle;
 }
-/* line 113, ../sass/_core.scss */
+/* line 112, ../sass/_core.scss */
 #marquee.fixed {
   position: fixed;
 }
-/* line 116, ../sass/_core.scss */
+/* line 115, ../sass/_core.scss */
 #marquee.fixed + #wrapper {
   position: absolute;
   top: 350px;
   z-index: 2;
 }
-/* line 121, ../sass/_core.scss */
+/* line 120, ../sass/_core.scss */
 #marquee h1 {
   margin-bottom: .25em;
 }
-/* line 125, ../sass/_core.scss */
-#marquee .left {
+/* line 124, ../sass/_core.scss */
+#marquee .sign {
+  text-align: center;
+  width: 100%;
+}
+/* line 128, ../sass/_core.scss */
+#marquee .sign.left {
   text-align: left;
   padding-right: 50%;
   padding-left: 50px;
 }
 
-/* line 132, ../sass/_core.scss */
+/* line 136, ../sass/_core.scss */
 #wrapper {
   border-top: 4px solid rgba(45, 50, 68, 0.5);
   width: 100%;
 }
 
-/* line 137, ../sass/_core.scss */
+/* line 141, ../sass/_core.scss */
 #intro {
   max-width: 1200px;
   padding: 50px;
 }
-/* line 141, ../sass/_core.scss */
+/* line 145, ../sass/_core.scss */
 #intro p {
   -webkit-columns: 2;
   -moz-columns: 2;
@@ -464,14 +468,14 @@ nav a {
   -moz-column-gap: 100px;
   column-gap: 100px;
 }
-/* line 147, ../sass/_core.scss */
+/* line 151, ../sass/_core.scss */
 #intro a:hover {
   background-color: #08c882;
   color: #f0f0f0;
   outline: 3px solid #08c882;
 }
 
-/* line 155, ../sass/_core.scss */
+/* line 159, ../sass/_core.scss */
 #content {
   position: relative;
   top: 0px;
@@ -480,25 +484,25 @@ nav a {
   padding: 0 0 50px;
 }
 
-/* line 161, ../sass/_core.scss */
+/* line 165, ../sass/_core.scss */
 footer {
   width: 100%;
   height: 100px;
   background-color: #b2b2b9;
 }
-/* line 165, ../sass/_core.scss */
+/* line 169, ../sass/_core.scss */
 footer.fixed {
   position: fixed;
   bottom: 0px;
 }
-/* line 169, ../sass/_core.scss */
+/* line 173, ../sass/_core.scss */
 footer ul {
   list-style: none;
   margin: 0;
   padding: 0;
   height: 100%;
 }
-/* line 176, ../sass/_core.scss */
+/* line 180, ../sass/_core.scss */
 footer li {
   background-size: 50px;
   background-repeat: no-repeat;
@@ -506,54 +510,56 @@ footer li {
   background-color: transparent;
   height: 100%;
 }
-/* line 185, ../sass/_core.scss */
+/* line 189, ../sass/_core.scss */
 footer a {
   display: block;
   height: 100%;
 }
-/* line 190, ../sass/_core.scss */
+/* line 194, ../sass/_core.scss */
 footer span {
   display: none;
 }
-/* line 194, ../sass/_core.scss */
+/* line 198, ../sass/_core.scss */
 footer #git {
   background-image: url("../images/git.svg");
 }
-/* line 197, ../sass/_core.scss */
+/* line 201, ../sass/_core.scss */
 footer #git:hover {
   background-color: #60B044;
 }
-/* line 202, ../sass/_core.scss */
+/* line 206, ../sass/_core.scss */
 footer #dribbble {
   background-image: url("../images/dribbble.svg");
 }
-/* line 205, ../sass/_core.scss */
+/* line 209, ../sass/_core.scss */
 footer #dribbble:hover {
   background-color: #EA4C89;
 }
-/* line 210, ../sass/_core.scss */
+/* line 214, ../sass/_core.scss */
 footer #linkedin {
   background-image: url("../images/linkedin.svg");
 }
-/* line 213, ../sass/_core.scss */
+/* line 217, ../sass/_core.scss */
 footer #linkedin:hover {
   background-color: #069;
 }
 
 @media screen and (min-width: 1200px) {
-  /* line 221, ../sass/_core.scss */
+  /* line 225, ../sass/_core.scss */
   #intro {
     margin: 0 auto;
   }
-  /* line 224, ../sass/_core.scss */
+  /* line 228, ../sass/_core.scss */
   #intro p {
     -webkit-columns: 1;
     -moz-columns: 1;
     columns: 1;
+    font-size: 1.25em;
+    line-height: 1.6;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 232, ../sass/_core.scss */
+  /* line 238, ../sass/_core.scss */
   #intro p {
     -webkit-columns: 1;
     -moz-columns: 1;
@@ -561,27 +567,27 @@ footer #linkedin:hover {
   }
 }
 @media screen and (max-width: 568px) {
-  /* line 239, ../sass/_core.scss */
+  /* line 245, ../sass/_core.scss */
   html, body {
     font-size: 14px;
   }
 
-  /* line 243, ../sass/_core.scss */
+  /* line 249, ../sass/_core.scss */
   #name {
     width: 200px !important;
   }
-  /* line 246, ../sass/_core.scss */
+  /* line 252, ../sass/_core.scss */
   #name .smaller {
     display: none;
   }
 
-  /* line 251, ../sass/_core.scss */
+  /* line 257, ../sass/_core.scss */
   nav {
     width: 50px;
     height: 50px;
     background: url("../images/menu.svg") no-repeat right bottom;
   }
-  /* line 255, ../sass/_core.scss */
+  /* line 261, ../sass/_core.scss */
   nav ul {
     -webkit-transition: all 0.75s cubic-bezier(0.23, 1, 0.32, 1);
     -moz-transition: all 0.75s cubic-bezier(0.23, 1, 0.32, 1);
@@ -602,50 +608,50 @@ footer #linkedin:hover {
     -webkit-filter: blur(5px);
     opacity: 0;
   }
-  /* line 266, ../sass/_core.scss */
+  /* line 272, ../sass/_core.scss */
   nav li {
     background-color: rgba(45, 50, 68, 0.95);
     line-height: 3em;
     float: none;
     width: 100%;
   }
-  /* line 272, ../sass/_core.scss */
+  /* line 278, ../sass/_core.scss */
   nav li a {
     color: #fff !important;
   }
-  /* line 276, ../sass/_core.scss */
+  /* line 282, ../sass/_core.scss */
   nav li div {
     top: auto;
     bottom: 0;
     background-color: #191b25;
     height: 2px;
   }
-  /* line 283, ../sass/_core.scss */
+  /* line 289, ../sass/_core.scss */
   nav li:last-child {
     display: none;
   }
 
-  /* line 289, ../sass/_core.scss */
+  /* line 295, ../sass/_core.scss */
   #marquee {
     height: 300px;
     padding: 0 12.5px;
   }
-  /* line 293, ../sass/_core.scss */
+  /* line 299, ../sass/_core.scss */
   #marquee.fixed + #wrapper {
     top: 300px;
   }
 
-  /* line 298, ../sass/_core.scss */
+  /* line 304, ../sass/_core.scss */
   #intro {
     padding: 12.5px;
   }
 
-  /* line 302, ../sass/_core.scss */
+  /* line 308, ../sass/_core.scss */
   #content {
     padding: 0;
   }
 
-  /* line 306, ../sass/_core.scss */
+  /* line 312, ../sass/_core.scss */
   .open nav ul {
     -webkit-transform: translate3d(0, 50px, 0);
     -moz-transform: translate3d(0, 50px, 0);

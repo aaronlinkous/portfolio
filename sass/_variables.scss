@@ -38,3 +38,11 @@ $mobile_p: 360px;
 	color: $dark_color;
 	line-height: $line_height;
 }
+
+%larger {
+	font-size: 1.25em;
+}
+
+%smaller {
+	font-size: .9em;
+}

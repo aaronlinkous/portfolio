@@ -98,7 +98,6 @@ nav {
 	@include display(flex);
 	@include align-items(center);
 	@include size(100% $header_height*7);
-	text-align: center;
 	background-size: cover;
 	background-position: center center;
 	font-size: 0;
@@ -122,10 +121,15 @@ nav {
 		margin-bottom: .25em;
 	}
 
-	.left {
-		text-align: left;
-		padding-right: 50%;
-		padding-left: $header_height;
+	.sign {
+		text-align: center;
+		width: 100%;
+	
+		&.left {
+			text-align: left;
+			padding-right: 50%;
+			padding-left: $header_height;
+		}
 	}
 }
 
@@ -223,6 +227,8 @@ footer {
 
 		p {
 			@include columns(1);
+			font-size: 1.25em;
+			line-height: $ratio;
 		}
 	}
 }

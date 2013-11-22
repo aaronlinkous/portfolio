@@ -21,7 +21,7 @@ button, .fake_button {
 	.fake_button {
 		display: inline-block;
 		color: $dark_color;
-		background-color: rgba($light_color, .15);
+		background-color: rgba($light_color, .35);
 		border-color: $dark_color;
 		margin: 0 $header_height/2;
 
@@ -34,7 +34,9 @@ button, .fake_button {
 }
 
 @media screen and (max-width: $mobile_p) {
-	button, .fake_button {
-		width: $header_height*2;
+	#marquee {
+		.fake_button {
+			width: $header_height*2;
+		}
 	}
 }
