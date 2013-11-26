@@ -1,12 +1,13 @@
 button, .fake_button {
 	@extend %animated;
 	@include appearance(none);
-	@include size($header_height*3 $header_height);
+	@include size(auto $header_height);
+	padding: 0 $header_height/2;
 	display: block;
 	background-color: $accent_color;
 	border: $border_width solid transparent;
 	font-size: $font_size;
-	line-height: $header_height - $border_width; //compensate for border
+	line-height: $header_height - $border_width*2; //compensate for border
 	color: $light_color;
 	text-align: center;
 	cursor: pointer;
@@ -19,6 +20,8 @@ button, .fake_button {
 
 #marquee {
 	.fake_button {
+		width: $header_height*3;
+		padding: 0;
 		display: inline-block;
 		color: $dark_color;
 		background-color: rgba($light_color, .35);
@@ -30,6 +33,12 @@ button, .fake_button {
 			background-color: $accent_color;
 			border-color: transparent;
 		}
+	}
+}
+
+@media screen and (max-width: $mobile_l) {
+	button, .fake_button {
+		width: 100%;
 	}
 }
 

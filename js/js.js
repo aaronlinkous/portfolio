@@ -1,4 +1,4 @@
-var mobile, header_height,marquee_height,wh,ww,dh,dw,time = 250,mobile_l = 568;
+var mobile, header_height,marquee_height,wh,ww,dh,dw,time = 250,mobile_l = 568,title = 0;
 var titles = ["Sr. Developer", "UI & UX Designer", "CSS > * Believer", "Analogy Extraordinaire", "Project Manager", "Car Guy"];
 
 function get_size() {
@@ -22,14 +22,17 @@ function get_size() {
 	dh <= wh ? $("footer").addClass("fixed") : $("footer").removeClass("fixed");
 }
 
-var i = 0;
-var l = titles.length-1;
+function load_ss(url) {
+	return '<div id="screenshot_modal">'+ss+'</div>';
+}
+
+
 function loop_titles() {
 	$(".title").fadeOut(time,function(){
-		$(this).text(titles[i]).fadeIn(time);
+		$(this).text(titles[title]).fadeIn(time);
 	});
 
-	i = i == l ? 0 : i + 1;
+	title = title == titles.length-1 ? 0 : title + 1;
 	setTimeout(loop_titles, 2000+(time*2));
 }
 
@@ -47,5 +50,9 @@ $(document).ready(function(){
 
 	$("nav").on("click", function(e) {
 		if(mobile) $("body").toggleClass("open");
+	});
+
+	$("#screenshots").on("click", function(e) {
+		$("body").append(load_ss);
 	});
 });

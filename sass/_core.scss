@@ -162,6 +162,11 @@ nav {
 	padding: 0 0 $header_height;
 }
 
+#screenshot_modal {
+	@include position(fixed, 0px 0px 0px 0px, 999);
+	background-color: $light_color;
+}
+
 footer {
 	@include size(100% $footer_height);
 	background-color: lighten($ghosted_color, 15%)	;
@@ -303,10 +308,6 @@ footer {
 
 	#intro {
 		padding: $header_height/4;
-	}
-
-	#content {
-		padding: 0;
 	}
 
 	.open nav ul {
