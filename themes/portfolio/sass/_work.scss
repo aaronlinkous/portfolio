@@ -1,0 +1,49 @@
+.WorkPage {
+	#marquee {
+		background-image: url("../images/above.jpg");
+		background-position: right top;
+		
+		h1, h2 {
+			color: $light_color;
+		}
+	}
+
+	#intro {
+		h1, h2 {
+			display: none;
+		}
+	}
+
+	@media screen and (min-width: $large_screen) {
+		#marquee {
+			height: $header_height*10;
+
+			&.fixed + #wrapper {
+				top: $header_height*10;
+			}
+		}
+	}
+
+	@media screen and (max-width: $tablet_p) {
+		#marquee {
+			h1, h2 {
+				display: none;
+			}
+		}
+
+		#intro {
+			h1 {
+				margin-bottom: .25em;
+			}
+			h1, h2 {
+				display: block;
+			}
+		}
+	}
+
+	@media screen and (max-width: $mobile_l) {
+		#marquee {
+			background-position-y: $header_height;
+		}
+	}
+}
