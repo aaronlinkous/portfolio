@@ -254,7 +254,7 @@ button:hover, .fake_button:hover {
   border-color: transparent;
 }
 
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 768px) {
   /* line 40, ../sass/_forms.scss */
   button, .fake_button {
     width: 100%;
@@ -501,28 +501,29 @@ nav a {
   bottom: 0px;
   left: 0px;
   z-index: 999;
+  display: none;
   background-color: #f0f0f0;
 }
 
-/* line 170, ../sass/_core.scss */
+/* line 171, ../sass/_core.scss */
 footer {
   width: 100%;
   height: 100px;
   background-color: #b2b2b9;
 }
-/* line 174, ../sass/_core.scss */
+/* line 175, ../sass/_core.scss */
 footer.fixed {
   position: fixed;
   bottom: 0px;
 }
-/* line 178, ../sass/_core.scss */
+/* line 179, ../sass/_core.scss */
 footer ul {
   list-style: none;
   margin: 0;
   padding: 0;
   height: 100%;
 }
-/* line 185, ../sass/_core.scss */
+/* line 186, ../sass/_core.scss */
 footer li {
   background-size: 50px;
   background-repeat: no-repeat;
@@ -530,46 +531,46 @@ footer li {
   background-color: transparent;
   height: 100%;
 }
-/* line 194, ../sass/_core.scss */
+/* line 195, ../sass/_core.scss */
 footer a {
   display: block;
   height: 100%;
 }
-/* line 199, ../sass/_core.scss */
+/* line 200, ../sass/_core.scss */
 footer span {
   display: none;
 }
-/* line 203, ../sass/_core.scss */
+/* line 204, ../sass/_core.scss */
 footer #git {
   background-image: url("../images/git.svg");
 }
-/* line 206, ../sass/_core.scss */
+/* line 207, ../sass/_core.scss */
 footer #git:hover {
   background-color: #60B044;
 }
-/* line 211, ../sass/_core.scss */
+/* line 212, ../sass/_core.scss */
 footer #dribbble {
   background-image: url("../images/dribbble.svg");
 }
-/* line 214, ../sass/_core.scss */
+/* line 215, ../sass/_core.scss */
 footer #dribbble:hover {
   background-color: #EA4C89;
 }
-/* line 219, ../sass/_core.scss */
+/* line 220, ../sass/_core.scss */
 footer #linkedin {
   background-image: url("../images/linkedin.svg");
 }
-/* line 222, ../sass/_core.scss */
+/* line 223, ../sass/_core.scss */
 footer #linkedin:hover {
   background-color: #069;
 }
 
 @media screen and (min-width: 1200px) {
-  /* line 230, ../sass/_core.scss */
+  /* line 231, ../sass/_core.scss */
   #intro {
     margin: 0 auto;
   }
-  /* line 233, ../sass/_core.scss */
+  /* line 234, ../sass/_core.scss */
   #intro p {
     -webkit-columns: 1;
     -moz-columns: 1;
@@ -579,7 +580,7 @@ footer #linkedin:hover {
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 243, ../sass/_core.scss */
+  /* line 244, ../sass/_core.scss */
   #intro p {
     -webkit-columns: 1;
     -moz-columns: 1;
@@ -587,27 +588,27 @@ footer #linkedin:hover {
   }
 }
 @media screen and (max-width: 568px) {
-  /* line 250, ../sass/_core.scss */
+  /* line 251, ../sass/_core.scss */
   html, body {
     font-size: 14px;
   }
 
-  /* line 254, ../sass/_core.scss */
+  /* line 255, ../sass/_core.scss */
   #name {
     width: 200px !important;
   }
-  /* line 257, ../sass/_core.scss */
+  /* line 258, ../sass/_core.scss */
   #name .smaller {
     display: none;
   }
 
-  /* line 262, ../sass/_core.scss */
+  /* line 263, ../sass/_core.scss */
   nav {
     width: 50px;
     height: 50px;
     background: url("../images/menu.svg") no-repeat right bottom;
   }
-  /* line 266, ../sass/_core.scss */
+  /* line 267, ../sass/_core.scss */
   nav ul {
     -webkit-transition: all 0.75s cubic-bezier(0.23, 1, 0.32, 1);
     -moz-transition: all 0.75s cubic-bezier(0.23, 1, 0.32, 1);
@@ -628,45 +629,45 @@ footer #linkedin:hover {
     -webkit-filter: blur(5px);
     opacity: 0;
   }
-  /* line 277, ../sass/_core.scss */
+  /* line 278, ../sass/_core.scss */
   nav li {
     background-color: rgba(45, 50, 68, 0.95);
     line-height: 3em;
     float: none;
     width: 100%;
   }
-  /* line 283, ../sass/_core.scss */
+  /* line 284, ../sass/_core.scss */
   nav li a {
     color: #fff !important;
   }
-  /* line 287, ../sass/_core.scss */
+  /* line 288, ../sass/_core.scss */
   nav li div {
     top: auto;
     bottom: 0;
     background-color: #191b25;
     height: 2px;
   }
-  /* line 294, ../sass/_core.scss */
+  /* line 295, ../sass/_core.scss */
   nav li:last-child {
     display: none;
   }
 
-  /* line 300, ../sass/_core.scss */
+  /* line 301, ../sass/_core.scss */
   #marquee {
     height: 300px;
     padding: 0 12.5px;
   }
-  /* line 304, ../sass/_core.scss */
+  /* line 305, ../sass/_core.scss */
   #marquee.fixed + #wrapper {
     top: 300px;
   }
 
-  /* line 309, ../sass/_core.scss */
+  /* line 310, ../sass/_core.scss */
   #intro {
     padding: 12.5px;
   }
 
-  /* line 313, ../sass/_core.scss */
+  /* line 314, ../sass/_core.scss */
   .open nav ul {
     -webkit-transform: translate3d(0, 50px, 0);
     -moz-transform: translate3d(0, 50px, 0);
@@ -677,6 +678,86 @@ footer #linkedin:hover {
     opacity: 1;
   }
 }
+/* line 1, ../sass/_slider.scss */
+.slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+/* line 6, ../sass/_slider.scss */
+.slider.prev {
+  cursor: url("../images/prev.png") 15 15, e-resize;
+  cursor: url("../images/prev.svg") 15 15, e-resize;
+}
+/* line 11, ../sass/_slider.scss */
+.slider.next {
+  cursor: url("../images/next.png") 15 15, w-resize;
+  cursor: url("../images/next.svg") 15 15, w-resize;
+}
+/* line 16, ../sass/_slider.scss */
+.slider.close {
+  cursor: url("../images/close.png") 15 15, pointer;
+  cursor: url("../images/close.svg") 15 15, pointer;
+}
+
+/* line 22, ../sass/_slider.scss */
+.slides {
+  -webkit-transition: all 0.75s cubic-bezier(0.23, 1, 0.32, 1);
+  -moz-transition: all 0.75s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.75s cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+/* line 32, ../sass/_slider.scss */
+.slide {
+  width: 100%;
+  height: 100%;
+  float: left;
+  clear: none;
+}
+
+/* line 38, ../sass/_slider.scss */
+.slider-nav {
+  position: absolute;
+  bottom: 25px;
+  z-index: 2;
+}
+
+/* line 42, ../sass/_slider.scss */
+.slider-nav__item {
+  border-radius: 12px;
+  width: 12px;
+  height: 12px;
+  float: left;
+  clear: none;
+  display: block;
+  margin: 0 5px;
+  background: #2d3244;
+  opacity: .33;
+}
+/* line 53, ../sass/_slider.scss */
+.slider-nav__item:hover {
+  opacity: .5;
+}
+
+/* line 58, ../sass/_slider.scss */
+.slider-nav__item--current {
+  opacity: .75;
+}
+
 /* line 3, ../sass/_home.scss */
 .Home header span {
   opacity: 0;
@@ -755,7 +836,7 @@ footer #linkedin:hover {
 /* line 69, ../sass/_home.scss */
 .Home #work_grid li img, .Home #work_grid li span {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
 }
 /* line 75, ../sass/_home.scss */

@@ -1,0 +1,60 @@
+.slider {
+	@include size(100% 100%);
+	position: relative;
+	overflow: hidden;
+
+	&.prev {
+		cursor: url("../images/prev.png") 15 15, e-resize;
+		cursor: url("../images/prev.svg") 15 15, e-resize;
+	}
+
+	&.next {
+		cursor: url("../images/next.png") 15 15, w-resize;
+		cursor: url("../images/next.svg") 15 15, w-resize;
+	}
+
+	&.close {
+		cursor: url("../images/close.png") 15 15, pointer;
+		cursor: url("../images/close.svg") 15 15, pointer;
+	}
+}
+
+.slides {
+	@include transition(all 0.75s $ease-out-quint);
+	@include transform-style(preserve-3d);
+	@include backface-visibility(hidden);
+	@include size(100% 100%);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+}
+.slide {
+	@include size(100% 100%);
+	float: left;
+	clear: none;
+}
+
+.slider-nav {
+	@include position(absolute, 0 0 $header_height/2 0, 2);
+}
+
+.slider-nav__item {
+	border-radius: 12px;
+	width: 12px;
+	height: 12px;
+	float: left;
+	clear: none;
+	display: block;
+	margin: 0 5px;
+	background: $dark_color;
+	opacity: .33;
+
+	&:hover {
+		opacity: .5;
+	}
+}
+
+.slider-nav__item--current {
+	opacity: .75;
+}

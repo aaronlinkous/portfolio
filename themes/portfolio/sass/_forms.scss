@@ -36,7 +36,7 @@ button, .fake_button {
 	}
 }
 
-@media screen and (max-width: $mobile_l) {
+@media screen and (max-width: $tablet_p) {
 	button, .fake_button {
 		width: 100%;
 	}

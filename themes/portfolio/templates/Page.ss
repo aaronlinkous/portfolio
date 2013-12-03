@@ -23,8 +23,12 @@ $Layout
 
 <% include Footer %>
 
+<div id="screenshot_modal"></div>
+
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="$ThemeDir/js/jquery.glide.min.js"></script>
 <script src="$ThemeDir/js/js.js"></script>
+
 <script type="text/javascript" src="//use.typekit.net/los8sls.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 

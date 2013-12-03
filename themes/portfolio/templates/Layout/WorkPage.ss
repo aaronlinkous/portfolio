@@ -12,5 +12,9 @@
 			<h2>$duties</h2>
 
 			$Content
+
+			<div class="row">
+				<button id="screenshots" class="centered" data-url="{$Link}screenshots">View Screenshots</button>
+			</div>
 		</div>
 </section>

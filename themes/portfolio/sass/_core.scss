@@ -164,6 +164,7 @@ nav {
 
 #screenshot_modal {
 	@include position(fixed, 0px 0px 0px 0px, 999);
+	display: none;
 	background-color: $light_color;
 }
 
